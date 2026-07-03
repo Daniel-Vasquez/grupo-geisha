@@ -84,48 +84,6 @@
         border-color: rgba(211, 44, 44, 0.8);
       }
 
-      /* ─── LOADING SCREEN ─── */
-      #loader {
-        position: fixed;
-        inset: 0;
-        background: var(--blue-deep);
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: opacity 0.8s ease;
-      }
-      #loader.done {
-        opacity: 0;
-        pointer-events: none;
-      }
-      .loader-logo {
-        font-size: 4rem;
-        color: #fff;
-        letter-spacing: 6px;
-        margin-bottom: 32px;
-        opacity: 0;
-        animation: fadeIn 0.6s 0.2s forwards;
-      }
-      .loader-bar-wrap {
-        width: 220px;
-        height: 2px;
-        background: rgba(255, 255, 255, 0.12);
-        border-radius: 2px;
-        overflow: hidden;
-      }
-      .loader-bar {
-        height: 100%;
-        background: var(--red);
-        width: 0;
-        animation: loadBar 1.8s ease-out forwards;
-      }
-      @keyframes loadBar {
-        to {
-          width: 100%;
-        }
-      }
       @keyframes fadeIn {
         to {
           opacity: 1;
@@ -197,7 +155,7 @@
       }
       .nav-btn {
         background: var(--red);
-        color: #fff;
+        color: #fff !important;
         padding: 11px 24px;
         border-radius: 8px;
         font-weight: 700;
@@ -908,21 +866,10 @@
       }
       .g-card-footer {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         padding-top: 16px;
         border-top: 1px solid rgba(255, 255, 255, 0.08);
-      }
-      .g-price {
-        font-size: 1.5rem;
-        color: #fff;
-        letter-spacing: 1px;
-      }
-      .g-price span {
-        font-size: 0.75rem;
-        color: rgba(255, 255, 255, 0.4);
-        letter-spacing: 0;
-        font-weight: 400;
       }
       .g-btn {
         background: rgba(211, 44, 44, 0.2);
@@ -1812,14 +1759,6 @@
       </svg>
     </div>
 
-    <!-- LOADER -->
-    <div id="loader">
-      <div class="loader-logo">
-        GRUPO <span style="color: var(--red)">GEISHA</span>
-      </div>
-      <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
-    </div>
-
     <!-- NAV -->
     <nav id="nav">
       <a href="#hero" class="nav-logo">
@@ -2045,13 +1984,13 @@
         <div class="nos-visual sr-r">
           <div class="nos-img-main">
             <img
-              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+              src="https://images.unsplash.com/photo-1688893288248-3338b8491a46?w=600&q=80"
               alt="Auto premium"
             />
           </div>
           <div class="nos-img-second">
             <img
-              src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600&q=80"
+              src="https://images.unsplash.com/photo-1738805569031-79d99addcecc?w=600&q=80"
               alt="Interior de auto"
             />
           </div>
@@ -2102,13 +2041,13 @@
             <div class="g-card-img">
               <div class="g-card-badge">Nuevo</div>
               <img
-                src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&q=80"
-                alt="BMW Nuevo"
+                src="https://images.unsplash.com/photo-1688893288248-3338b8491a46?w=600&q=80"
+                alt="Kia Sportage Nuevo"
               />
             </div>
             <div class="g-card-info">
-              <div class="g-card-brand">BMW</div>
-              <div class="g-card-name">Serie 3 2025</div>
+              <div class="g-card-brand">Kia</div>
+              <div class="g-card-name">Sportage EX 2025</div>
               <div class="g-card-specs">
                 <span class="g-spec"
                   ><svg
@@ -2122,7 +2061,7 @@
                   >
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                   </svg>
-                  255 hp</span
+                  191 hp</span
                 ><span class="g-spec"
                   ><svg
                     width="14"
@@ -2136,11 +2075,10 @@
                     <circle cx="12" cy="12" r="10" />
                     <path d="M12 6v6l4 2" />
                   </svg>
-                  0-100 en 5.8s</span
+                  0-100 en 8.9s</span
                 >
               </div>
               <div class="g-card-footer">
-                <div class="g-price">$890,000 <span>MXN</span></div>
                 <button class="g-btn">Ver detalles</button>
               </div>
             </div>
@@ -2151,13 +2089,13 @@
                 Seminuevo
               </div>
               <img
-                src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&q=80"
-                alt="Mercedes Seminuevo"
+                src="https://images.unsplash.com/photo-1551817280-6d59c77ce1b8?w=600&q=80"
+                alt="Nissan Seminuevo"
               />
             </div>
             <div class="g-card-info">
-              <div class="g-card-brand">Mercedes-Benz</div>
-              <div class="g-card-name">GLE 450 2023</div>
+              <div class="g-card-brand">Nissan</div>
+              <div class="g-card-name">Qashqai Advance 2024</div>
               <div class="g-card-specs">
                 <span class="g-spec"
                   ><svg
@@ -2171,7 +2109,7 @@
                   >
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                   </svg>
-                  362 hp</span
+                  141 hp</span
                 ><span class="g-spec"
                   ><svg
                     width="14"
@@ -2186,11 +2124,10 @@
                       d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 6v6l3 3"
                     />
                   </svg>
-                  28,000 km</span
+                  32,000 km</span
                 >
               </div>
               <div class="g-card-footer">
-                <div class="g-price">$1,150,000 <span>MXN</span></div>
                 <button class="g-btn">Ver detalles</button>
               </div>
             </div>
@@ -2199,62 +2136,13 @@
             <div class="g-card-img">
               <div class="g-card-badge">Nuevo</div>
               <img
-                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0729?w=600&q=80"
-                alt="Audi Nuevo"
-              />
-            </div>
-            <div class="g-card-info">
-              <div class="g-card-brand">Audi</div>
-              <div class="g-card-name">Q5 Sportback 2025</div>
-              <div class="g-card-specs">
-                <span class="g-spec"
-                  ><svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                  </svg>
-                  261 hp</span
-                ><span class="g-spec"
-                  ><svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 6v6l4 2" />
-                  </svg>
-                  0-100 en 6.3s</span
-                >
-              </div>
-              <div class="g-card-footer">
-                <div class="g-price">$980,000 <span>MXN</span></div>
-                <button class="g-btn">Ver detalles</button>
-              </div>
-            </div>
-          </div>
-          <div class="g-card" data-cat="seminuevo">
-            <div class="g-card-img">
-              <div class="g-card-badge" style="background: var(--blue)">
-                Seminuevo
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80"
-                alt="Toyota Seminuevo"
+                src="https://images.unsplash.com/photo-1632137924251-fcea5ff46035?w=600&q=80"
+                alt="Toyota Nuevo"
               />
             </div>
             <div class="g-card-info">
               <div class="g-card-brand">Toyota</div>
-              <div class="g-card-name">RAV4 Hybrid 2022</div>
+              <div class="g-card-name">RAV4 Limited 2025</div>
               <div class="g-card-specs">
                 <span class="g-spec"
                   ><svg
@@ -2268,7 +2156,55 @@
                   >
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                   </svg>
-                  219 hp</span
+                  203 hp</span
+                ><span class="g-spec"
+                  ><svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
+                  0-100 en 8.1s</span
+                >
+              </div>
+              <div class="g-card-footer">
+                <button class="g-btn">Ver detalles</button>
+              </div>
+            </div>
+          </div>
+          <div class="g-card" data-cat="seminuevo">
+            <div class="g-card-img">
+              <div class="g-card-badge" style="background: var(--blue)">
+                Seminuevo
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1658504010272-0ee9efe72239?w=600&q=80"
+                alt="Renault Seminuevo"
+              />
+            </div>
+            <div class="g-card-info">
+              <div class="g-card-brand">Renault</div>
+              <div class="g-card-name">Duster Intens 2023</div>
+              <div class="g-card-specs">
+                <span class="g-spec"
+                  ><svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                  </svg>
+                  158 hp</span
                 ><span class="g-spec"
                   ><svg
                     width="14"
@@ -2283,11 +2219,10 @@
                       d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 6v6l3 3"
                     />
                   </svg>
-                  42,000 km</span
+                  38,000 km</span
                 >
               </div>
               <div class="g-card-footer">
-                <div class="g-price">$520,000 <span>MXN</span></div>
                 <button class="g-btn">Ver detalles</button>
               </div>
             </div>
@@ -2296,13 +2231,13 @@
             <div class="g-card-img">
               <div class="g-card-badge">Nuevo</div>
               <img
-                src="https://images.unsplash.com/photo-1548111464-df21b859e5fc?w=600&q=80"
-                alt="Mazda Nuevo"
+                src="https://images.unsplash.com/photo-1738805569031-79d99addcecc?w=600&q=80"
+                alt="Kia Nuevo"
               />
             </div>
             <div class="g-card-info">
-              <div class="g-card-brand">Mazda</div>
-              <div class="g-card-name">CX-90 2025</div>
+              <div class="g-card-brand">Kia</div>
+              <div class="g-card-name">Sportage X-Line 2024</div>
               <div class="g-card-specs">
                 <span class="g-spec"
                   ><svg
@@ -2316,7 +2251,7 @@
                   >
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                   </svg>
-                  340 hp</span
+                  180 hp</span
                 ><span class="g-spec"
                   ><svg
                     width="14"
@@ -2330,11 +2265,10 @@
                     <circle cx="12" cy="12" r="10" />
                     <path d="M12 6v6l4 2" />
                   </svg>
-                  0-100 en 6.0s</span
+                  0-100 en 9.3s</span
                 >
               </div>
               <div class="g-card-footer">
-                <div class="g-price">$870,000 <span>MXN</span></div>
                 <button class="g-btn">Ver detalles</button>
               </div>
             </div>
@@ -2913,13 +2847,7 @@
     </footer>
 
     <script>
-      // ── LOADER ──
-      window.addEventListener("load", () => {
-        setTimeout(() => {
-          document.getElementById("loader").classList.add("done");
-          startCounters();
-        }, 2000);
-      });
+      window.addEventListener("load", startCounters);
 
       // ── CUSTOM CURSOR ──
       const cursor = document.getElementById("cursor");
