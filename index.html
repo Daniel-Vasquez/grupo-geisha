@@ -35,7 +35,7 @@
         scroll-behavior: smooth;
       }
       body {
-        font-family: "Sora", sans-serif;
+        font-family: "Open Sans";
         background: var(--off);
         color: var(--blue);
         overflow-x: hidden;
@@ -145,9 +145,10 @@
         justify-content: space-between;
         padding: 22px 60px;
         transition: all 0.4s ease;
+        background-color: var(--white);
       }
       nav.scrolled {
-        background: rgba(13, 20, 50, 0.95);
+        /* background: rgba(13, 20, 50, 0.95); */
         backdrop-filter: blur(24px);
         padding: 14px 60px;
         box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
@@ -171,7 +172,7 @@
         list-style: none;
       }
       .nav-links a {
-        color: rgba(255, 255, 255, 0.65);
+        color: var(--blue);
         text-decoration: none;
         font-size: 0.78rem;
         font-weight: 600;
@@ -190,9 +191,9 @@
         background: var(--red);
         transition: width 0.3s;
       }
-      .nav-links a:hover {
+      /*.nav-links a:hover {
         color: #fff;
-      }
+      }*/
       .nav-links a:hover::after {
         width: 100%;
       }
@@ -1844,7 +1845,9 @@
 
     <!-- NAV -->
     <nav id="nav">
-      <a href="#hero" class="nav-logo">GRUPO <em>GEISHA</em></a>
+      <a href="#hero" class="nav-logo">
+        <img src="logo-geishagroup.png" alt="Logo Geisha Group" width="127px" />
+      </a>
       <ul class="nav-links">
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#gallery">Vehículos</a></li>
